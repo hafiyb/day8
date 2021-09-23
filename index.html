@@ -7,17 +7,97 @@
     
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <h2>HBvideoPlayer</h2>
+        <p>An attempt at using CSS grid</p>
+    </nav>
+
     <div id="app">
+        <div id="grid-box">
+            <div id="title-box">
+                <h3 id="vid-title">Test video of a road in a city</h3>
+            </div>
 
+            <div id="video-box">
+                <video id="player" src="assets/sample-5s.mp4"></video>
+            </div>
+            <div id="control-box">
+                <div class="control-sub-box">
+                    <div class="btn-control" id="btn-pp" onclick="actionPp()">
+                        <i id="icon-pause" class="fas fa-play"></i>
+                    </div>
+                    <div class="btn-control" id="btn-voldn" onclick="actionVol(-0.1)">
+                        <i class="fas fa-volume-down"></i>
+                    </div>
+                    <div class="btn-control" id="btn-volup" onclick="actionVol(+0.1)">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="btn-control" id="btn-mute" onclick="actionMute()">
+                        <i class="fas fa-volume-mute"></i>
+                    </div>   
+                    <div id="volume-bar">
+                        <div id="volume-value"></div>
+                    </div>
+                </div>
+                
+                <div class="control-sub-box">
+                    <div class="btn-control" onclick="actionNav(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                    </div> 
+                    <div class="btn-control" onclick="actionNav(+1)">
+                        <i class="fas fa-chevron-right"></i>
+                        </div> 
+                </div>
 
+                  
+            </div>
+            <div id="choice-box">
+                <div class="thumbnail-box" onclick="changeVid(0)">
+                    <img src="assets/thumbs (1).png" alt="" >
+                    <div>
+                        <h3>Test video of a road in a city</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="thumbnail-box" onclick="changeVid(1)">
+                    <img src="assets/thumbs (2).png" alt="" >
+                    <div>
+                        <h3>Test video of a couple of buses passing by the park</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="thumbnail-box" onclick="changeVid(2)">
+                    <img src="assets/thumbs (3).png" alt="" >
+                    <div>
+                        <h3>A stream of vehicles passing by the park</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="thumbnail-box" onclick="changeVid(3)">
+                    <img src="assets/thumbs (4).png" alt="" >
+                    <div>
+                        <h3>Test video of the road, and then of the traffic flow</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="thumbnail-box" onclick="changeVid(4)">
+                    <img src="assets/thumbs (5).png" alt="" >
+                    <div>
+                        <h3>Videos of the park, roads, and even people crossing a pedestrian crossing</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
-<script>
-
-    
-</script>
+<script src="script.js"></script>
 </html>

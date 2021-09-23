@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="app">
+        <video id="vid1" src="video1.mp4" controls loop autoplay muted></video>
+    
+        <br>
+
+        <div id="btn-play" class="button2" onclick="vidPlay()">Play</div>
+        <div id="btn-pause" class="button2" onclick="vidPause()">Pause</div>
+
+        <!-- <div class="button2" onclick="minVol()">Vol --</div>
+        <div class="button2" onclick="maxVol()">Vol ++</div> -->
+
+        <div class="button2" onclick="volCtrl(0)">Vol --</div>
+        <div class="button2" onclick="volCtrl(1)">Vol ++</div>
+
+        <div id="btn-pp" class="button2" onclick="vidPlayPause()">
+            <i id="icon-pause" class="fas fa-pause"></i>
+        </div>
+
+        <div class="button2" onclick="switchVid('video1.mp4')">Play BBB</div>
+        <div class="button2" onclick="switchVid('video2.mp4')">Play Other</div>
+
+    </div>
+</body>
+<script src="script3.js"></script>
+</html>
